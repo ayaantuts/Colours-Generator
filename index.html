@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Colours</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<main>
+		<div class="preview-box">
+			<div class="box"></div>
+			<div class="text">
+				<span class="color">Color</span>
+				<span class="shadow">Shadow</span>
+			</div>
+		</div>
+
+		<div class="sliders">
+			<div class="container">
+				<div class="color">
+					<input type="range" class="range red" min="0" value=0 max="255" step="1">
+					<input type="number" value="0" class="num-in inputNum redval">
+					<div class="color-name">Red</div>
+				</div>
+				<div class="color">
+					<input type="range" class="range green" min="0" value=0 max="255" step="1">
+					<input type="number" value="0" class="num-in inputNum greenval">
+					<div class="color-name">Green</div>
+				</div>
+				<div class="color">
+					<input type="range" class="range blue" min="0" value=0 max="255" step="1">
+					<input type="number" value="0" class="num-in inputNum blueval">
+					<div class="color-name">Blue</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="result">
+			<div class="container">
+				#<input type="text" class="num-in hex" value="000000">
+			</div>
+			<div class="btns">
+				<div class="btn set">Set</div>
+				<div class="btn copy">Copy</div>
+				<div class="btn reset">Reset</div>
+			</div>
+		</div>
+	</main>
+	<div class="copied-overlay">
+		Copied Successfully!
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>

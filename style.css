@@ -1,0 +1,188 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	outline: none;
+	user-select: none;
+	box-sizing: border-box;
+	transition: .4s ease-in-out;
+}
+
+body {
+	min-height: 100vh;
+	width: 100%;
+	font-family: sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-color: #000;
+	color: #fff;
+}
+
+main {
+	max-width: 600px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.preview-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 80%;
+	flex-direction: column;
+}
+
+.preview-box .text {
+	font-size: 2.3rem;
+	transition: 0s;
+}
+
+.preview-box .box {
+	margin: 0 0 25px 0;
+	height: auto;
+	width: 80%;
+	aspect-ratio: 1.25;
+	transition: 0s;
+	border: 1px solid #444;
+}
+
+.preview-box .text .color {
+	color: var(--clr);
+}
+
+.preview-box .text .shadow {
+	color: #4446;
+	text-shadow: -1px 1px 0 var(--clr), -2px 2px 0 var(--clr);
+}
+
+.sliders {
+	padding: 10px;
+	font-size: 1.3rem;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.color {
+	margin: 2px 4px;
+	text-align: center;
+	padding: 10px 20px;
+}
+
+.color:not(:last-of-type) {
+	border-right: 1px solid #444;
+}
+
+.range {
+	width: 100%;
+	height: 3px;
+}
+
+.num-in {
+	margin: 10px 0;
+	width: 4ch;
+	padding: .3rem 0;
+	background-color: transparent;
+	border: 0;
+	outline: none;
+	color: #fff;
+	font-size: 1.3rem;
+	text-align: center;
+	border-bottom: 1px solid #444;
+}
+
+.num-in::-webkit-inner-spin-button,
+.num-in::-webkit-outer-spin-button {
+	display: none;
+	margin: 0;
+	padding: 0;
+}
+
+.num-in:focus {
+	border-bottom-color: #fff;
+}
+
+.color-name {
+	font-size: 1.3rem;
+	color: #444;
+	margin-top: 20px;
+}
+
+.result {
+	border-top: 1px solid #444;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 40px 0;
+}
+
+.btn {
+	margin: .3rem .2rem;
+	padding: .5rem .7rem;
+	border: 1px solid;
+	cursor: pointer;
+	border-radius: 4px;
+	color: #444;
+}
+
+.hex {
+	width: 7ch;
+	font-size: 2.3rem;
+	text-transform: uppercase;
+}
+
+.btns {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.btn {
+	position: relative;
+	margin: 0 12px;
+}
+
+.btn:not(:last-of-type)::before {
+	content: '';
+	width: 1px;
+	height: 80%;
+	position: absolute;
+	right: -14px;
+	top: 10%;
+	background-color: #444;
+}
+
+.btn:hover {
+	color: #fff;
+	background-color: #444;
+}
+
+.copied-overlay {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #111;
+	pointer-events: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: 1s ease;
+	z-index: 9999;
+	padding: 10px;
+	font-size: 2.7rem;
+}
+
+.copied-overlay.show {
+	opacity: 1;
+}
